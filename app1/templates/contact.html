@@ -1,0 +1,21 @@
+{% extends "ss.html" %}
+{% load static %}
+{% block title %}
+    contact
+{% endblock title %}
+{% block content %}
+<div class="parent">
+    <div class='form-container'>
+        <h1 class="register" > register</h1>
+        <form action="{% url 'user_form' %}" method="POST" class="form1">
+            
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Submit</button>
+    
+        </form>
+    </div>
+</div>
+
+
+{% endblock content  %}

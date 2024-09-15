@@ -1,0 +1,22 @@
+{% extends "ss.html" %}
+{% load static %}
+{% block title %}
+    contact details 
+{% endblock title %}
+{% block content %}
+<h1 class='hed-1'>contact details</h1>
+<table class='tab-1'>
+    <tr class='j'>
+        <th class='tab-2'>name</th>
+        <th class='tab-3'>email</th>
+        <th class='tab-4'>phone</th>
+    </tr>
+    {% for i in dtls %}
+    <tr class='trrrr'>
+        <td>{{i.name}}</td>
+        <td>{{i.email}}</td>
+        <td>{{i.phone}}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock content  %}

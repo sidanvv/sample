@@ -1,0 +1,16 @@
+{% extends "ss.html" %}
+{% load static %}
+{% block title %}
+    teacher
+{% endblock title %}
+{% block content %}
+ <div class='t-main-block'>
+  {% for i in teacher %}
+  <div class='t-main-block-1'>
+       <h1>{{i.teachers_name}}</h1>
+      <h6>{{i.course_name}}</h6>
+      <img src='{{ i.teacher_image.url }}' class='t-pic'>
+  </div> 
+  {% endfor %}
+ </div>
+{% endblock content  %}

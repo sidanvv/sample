@@ -1,0 +1,30 @@
+{% extends "ss.html" %}
+{% load static %}
+
+
+{% block title %}
+    details
+{% endblock title %}
+
+
+{% block content %}
+<p class='b'>welcome to details project</p>
+
+   <div class='t'>
+    {% for i in dtls  %}
+        <div class='n'>
+            <h6>IPCS GLOBAL</h6>
+            <div class='v1'>
+                <p class='n1'>name:</p>
+                <p class='w1' > {{i.course_name}}<p>
+            </div>
+            <div class='v2'>
+                <p class='n2'>course:</p>
+                <p class='w2'>{{i.course_details}} </p>
+            </div>
+            
+        </div>
+    {% endfor %}
+    </div>
+
+{% endblock content  %}

@@ -1,0 +1,23 @@
+{% extends "ss.html" %}
+{% load static %}
+{% block title %}
+    contact2
+{% endblock title %}
+{% block content %}
+     <div class="parent">
+        <div  class='form-container'>
+            <form action="{% url 'emp_update' emp_up.id %}" method="post">
+                {% csrf_token %}
+                <label for="" >Employ Id</label>
+                <input type="number" name="emp_id" value='{{emp_up.Employ_Id}}'><br>
+                <label for="">fullname</label>
+                <input type="text" name="name" value='{{emp_up.fullname}}'><br>
+                <label for="">Email</label>
+                <input type="email" name="email" value='{{emp_up.email}}'><br>
+                <label for="">phone</label>
+                <input type="number" name="number" value='{{emp_up.phone}}'><br>
+                <button type="submit" >Submit</button>
+            </form>
+        </div>
+     </div>
+{% endblock content  %}
